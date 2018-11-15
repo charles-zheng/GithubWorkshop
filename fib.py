@@ -2,9 +2,10 @@
 
 
 def fib(n):
-    if n == 0 or n == 1:
-        return n
-    return fib(n - 1) + fib(n - 2)
+    f0, f1 = 0, 1
+    for _ in range(n):
+        f0, f1 = f1, f0 + f1
+    return f0
 
 
 print('The first 10 fib numbers are:')
